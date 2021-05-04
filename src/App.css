@@ -1,0 +1,78 @@
+.App {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 250%;
+  font: 13px 'Roboto', "Helvetica Neue", Helvetica;
+}
+
+.logoSection {
+  grid-column: span 2;
+  background-color: #263238;
+  border-bottom: 2px solid rgb(126, 121, 121);
+}
+
+.logo {
+  color: #FFFFFFBF;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.header {
+  grid-column: span 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 2px solid rgb(126, 121, 121);
+}
+
+.header-links {
+  margin-right:2.5em;
+}
+
+.header-link {
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar {
+  grid-column: span 2;
+  background-color: #263238;
+}
+
+.nav-link{
+  color: #FFFFFFBF;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px 20px;
+  height: 100%;
+}
+
+.content {
+  grid-column: span 10;
+  background-color: #d6d8da;
+  padding-left: 10px;
+}
+
+.panel{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #FCFCFC;
+}
+
+.panel-heading {
+  border-bottom: 1px solid black;
+  padding-left: 10px;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+.footer {
+  padding: 10px;
+}
