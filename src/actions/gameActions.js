@@ -1,4 +1,4 @@
-import { FETCH_GAMES, NEW_GAME } from './types';
+import { FETCH_GAMES, FETCH_GAME, NEW_GAME } from './types';
 
 export const fetchGames = () => dispatch => {
     fetch("http://localhost:8080/games")
@@ -6,6 +6,15 @@ export const fetchGames = () => dispatch => {
         .then(games => dispatch({
             type: FETCH_GAMES,
             payload: games
+        }));
+}
+
+export const fetchGame = (gameId) => dispatch => {
+    fetch(`http://localhost:8080/games/${gameId}`)
+        .then(res => res.json())
+        .then(game => dispatch({
+            type: FETCH_GAME,
+            payload: game
         }));
 }
 

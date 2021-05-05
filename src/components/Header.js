@@ -20,7 +20,7 @@ class Header extends Component {
                         </NavLink>
                     </div> :
                     <div>
-                        <NavLink className="header-link" to="/">
+                        <NavLink className="header-link" to={`/users/${this.props.user.userName}`}>
                             {this.props.user.userName}
                         </NavLink>
                         &nbsp;/&nbsp;

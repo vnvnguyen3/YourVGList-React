@@ -12,6 +12,8 @@ import Games from './components/Games';
 import ListItems from './components/ListItems';
 import Login from './components/Login';
 import Register from './components/Register';
+import GameProfile from './components/GameProfile';
+import UserProfile from './components/UserProfile';
 
 function App() {
   return (
@@ -30,8 +32,10 @@ function App() {
           <div className="content">
             <Switch>
               <Route path="/" exact component={Home} />
-              <Route path="/users" component={Users} />
-              <Route path="/games" component={Games} />
+              <Route path="/users" exact component={Users} />
+              <Route path="/users/:userName" component={UserProfile} />
+              <Route path="/games" exact component={Games} />
+              <Route path="/games/:gameId" component={GameProfile} /> 
               <Route path="/listItems" component={ListItems} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />

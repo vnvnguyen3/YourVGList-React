@@ -1,4 +1,4 @@
-import { FETCH_GAMES, NEW_GAME } from '../actions/types';
+import { FETCH_GAMES, FETCH_GAME, NEW_GAME } from '../actions/types';
 
 const initialState = {
     games: [],
@@ -11,6 +11,11 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 games: action.payload
+            };
+        case FETCH_GAME:
+            return {
+                ...state,
+                game: action.payload
             };
         case NEW_GAME:
             return {

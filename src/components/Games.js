@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchGames } from '../actions/gameActions';
@@ -11,10 +12,9 @@ class Games extends Component {
     render() {
         const gameItems = this.props.games.map(game => (
             <div key={game.id}>
-                <h3>{game.title}</h3>
-                <p>{game.platform}</p>
-                <p>{game.description}</p>
-                <p>{game.releaseDate}</p>
+                <Link to={`/games/${game.id}`}>
+                    {game.title}
+                </Link>
             </div>
         ));
         return (

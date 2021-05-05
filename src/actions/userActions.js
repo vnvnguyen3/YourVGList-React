@@ -1,4 +1,4 @@
-import { FETCH_USERS, NEW_USER, UPDATE_USER, LOGIN, LOGOUT } from './types';
+import { FETCH_USERS, FETCH_USER, NEW_USER, UPDATE_USER, LOGIN, LOGOUT } from './types';
 
 export const fetchUsers = () => dispatch => {
     fetch("http://localhost:8080/users")
@@ -8,6 +8,15 @@ export const fetchUsers = () => dispatch => {
             payload: users
         }));
 };
+
+export const fetchUser = (userName) => dispatch => {
+    fetch(`http://localhost:8080/users/userName/${userName}`)
+        .then(res => res.json())
+        .then(user => dispatch({
+            type: FETCH_USER,
+            payload: user
+        }));
+} 
 
 export const createUser = (userData) => dispatch => {
     fetch('http://localhost:8080/add/user', {
