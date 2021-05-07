@@ -14,6 +14,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import GameProfile from './components/GameProfile';
 import UserProfile from './components/UserProfile';
+import AddGame from './components/AddGame';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               <Route path="/users/:userName" component={UserProfile} />
               <Route path="/games" exact component={Games} />
               <Route path="/games/:gameId" component={GameProfile} /> 
+              <Route path="/addGame" component={AddGame} />
               <Route path="/listItems" component={ListItems} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />

@@ -20,6 +20,9 @@ class Games extends Component {
         return (
             <div>
                 <h1>Games</h1>
+                <Link to="/addGame">
+                    <button>Add Game</button>
+                </Link>
                 {gameItems}
             </div>
         )

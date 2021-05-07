@@ -21,7 +21,7 @@ export default function(state = initialState, action) {
         case NEW_USER:
             return {
                 ...state,
-                user: action.payload
+                profile: action.payload
             }
         case UPDATE_USER:
             return {
