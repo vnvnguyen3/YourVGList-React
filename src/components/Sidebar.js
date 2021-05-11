@@ -17,10 +17,6 @@ class Sidebar extends Component {
                     <i className="fa fa-gamepad" />&nbsp;Games
                 </NavLink>
                 <br />
-                <NavLink className="nav-link" to="/ListItems">
-                    ListItems
-                </NavLink>
-                <br />
             </div>
         )
     }

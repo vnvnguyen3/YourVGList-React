@@ -9,7 +9,6 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Users from './components/Users';
 import Games from './components/Games';
-import ListItems from './components/ListItems';
 import Login from './components/Login';
 import Register from './components/Register';
 import GameProfile from './components/GameProfile';
@@ -38,7 +37,6 @@ function App() {
               <Route path="/games" exact component={Games} />
               <Route path="/games/:gameId" component={GameProfile} /> 
               <Route path="/addGame" component={AddGame} />
-              <Route path="/listItems" component={ListItems} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             </Switch>

@@ -1,4 +1,4 @@
-import { FETCH_USERS, FETCH_USER, NEW_USER, UPDATE_USER, LOGIN, LOGOUT } from '../actions/types';
+import { FETCH_USERS, FETCH_USER, NEW_USER, UPDATE_USER, UPDATE_USER_DESCRIPTION, LOGIN, LOGOUT } from '../actions/types';
 
 const initialState = {
     users: [],
@@ -26,7 +26,12 @@ export default function(state = initialState, action) {
         case UPDATE_USER:
             return {
                 ...state,
-                profile: action.payload
+                user: action.payload
+            }
+        case UPDATE_USER_DESCRIPTION:
+            return {
+                ...state,
+                user: action.payload
             }
         case LOGIN:
             return {

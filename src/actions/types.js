@@ -2,6 +2,7 @@ export const FETCH_USERS = 'FETCH_USERS';
 export const FETCH_USER = 'FETCH_USER';
 export const NEW_USER = 'NEW_USER';
 export const UPDATE_USER = 'UPDATE_USER';
+export const UPDATE_USER_DESCRIPTION = 'UPDATE_USER_DESCRIPTION';
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 

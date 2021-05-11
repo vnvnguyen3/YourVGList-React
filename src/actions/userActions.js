@@ -1,4 +1,4 @@
-import { FETCH_USERS, FETCH_USER, NEW_USER, UPDATE_USER, LOGIN, LOGOUT } from './types';
+import { FETCH_USERS, FETCH_USER, NEW_USER, UPDATE_USER, UPDATE_USER_DESCRIPTION, LOGIN, LOGOUT } from './types';
 
 export const fetchUsers = () => dispatch => {
     fetch("http://localhost:8080/users")
@@ -45,6 +45,21 @@ export const updateUser = (user) => dispatch => {
         .then(res => res.json())
         .then(dispatch({
             type: UPDATE_USER,
+            payload: user
+        }))
+}
+
+export const updateUserDescription = (user) => dispatch => {
+    fetch('http://localhost:8080/update/user/description', {
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res => res.json())
+        .then(dispatch({
+            type: UPDATE_USER_DESCRIPTION,
             payload: user
         }))
 }
